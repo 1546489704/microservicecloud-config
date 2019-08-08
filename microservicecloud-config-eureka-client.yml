@@ -12,15 +12,16 @@ spring:
   application:
     name: microservicecloud-config-eureka-client
     
-euerka:
+eureka:
   instance:
-    hostname: euerka7001.com
+    hostname: eureka7001.com    # eureka 服务器短的实例名称
   client:
-    register-with-euerka: false #当前的euerka-server自己不注册进服务列表中
-    fetch-registry: false #不通过eureka获取注册信息
+    register-with-eureka: false  # false 表示不向注册中心注册自己
+    fetch-registry: false  # false 表示自己及时注册中心，我的职责就是维护服务实例。并不需要检索服务 
     service-url:
       defaultZone: http://eureka7001.com/euerka/
-      
+    
+   
 ---
 
 server:
@@ -31,11 +32,11 @@ spring:
   application:
     name: microservicecloud-config-eureka-client
     
-euerka:
+eureka:
   instance:
-    hostname: euerka7001.com
+    hostname: eureka7001.com    # eureka 服务器短的实例名称
   client:
-    register-with-euerka: false #当前的euerka-server自己不注册进服务列表中
-    fetch-registry: false #不通过eureka获取注册信息
+    register-with-eureka: false  # false 表示不向注册中心注册自己
+    fetch-registry: false  # false 表示自己及时注册中心，我的职责就是维护服务实例。并不需要检索服务 
     service-url:
       defaultZone: http://eureka7001.com/euerka/
